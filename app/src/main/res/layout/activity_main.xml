@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/smalltool_pailuanqi_title">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smalltool_pailuanqi_canlendar_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/smalltool_pailuanqi_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/smalltool_pailuanqi_left"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/smalltool_pailuanqi_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="11"
+                    android:textColor="#fe527a"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/smalltool_pailuanqi_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:src="@mipmap/smalltool_pailuanqi_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/smalltool_circle_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/jisuan_before"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="               经期天数"
+                            android:textColor="#333333"
+                            android:textSize="15dp" />
+
+                        <com.example.yang.jingqi.BetterSpinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/dialog_circle_bg_white"
+                            android:hint="请输入天数"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColorHint="#cccccc"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="        月经周期天数"
+                            android:textColor="#333333"
+                            android:textSize="15dp" />
+
+                        <com.example.yang.jingqi.BetterSpinner
+                            android:id="@+id/spinner2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/dialog_circle_bg_white"
+                            android:hint="请输入天数"
+                            android:inputType="number"
+                            android:padding="10dp"
+                            android:textColorHint="#cccccc"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="上次月经开始时间"
+                            android:textColor="#333333"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/spinner3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/dialog_circle_bg_white"
+                            android:padding="10dp"
+                            android:textColorHint="#cccccc"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/smalltool_but"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/smalltool_circle_bg_pink"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="开始计算"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/jisuan_after"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/smalltool_pailuanqi_bg"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="50dp">
+
+                            <TextView
+                                style="@style/weekName"
+                                android:background="#f0C2B3"
+                                android:text="日/SUN"
+                                android:textColor="@color/zhanghui" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:text="一/MON" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:text="二/TUE" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:text="三/WED" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:text="四/THU" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:text="五/FRI" />
+
+                            <TextView
+                                style="@style/weekName"
+                                android:background="#f0C2B3"
+                                android:text="六/SAT"
+                                android:textColor="@color/zhanghui" />
+                        </LinearLayout>
+
+                        <ViewFlipper
+                            android:id="@+id/flipper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/smalltool_pailuanqi_tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@mipmap/smalltool_pailuanqi_tag"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/smalltool_but2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/smalltool_circle_bg_pink"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="重新计算"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="结果仅供参考"
+                        android:textColor="@color/pink" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
